@@ -132,4 +132,4 @@ class Touch(object):
         self.spi.write_readinto(self.tx_buf, self.rx_buf)
         self.cs(1)
 
-        return (self.rx_buf[1] << 4) | (self.rx_buf[2] >> 4)
+        return (self.rx_buf[1] << 5) | (self.rx_buf[2] >> 3)
